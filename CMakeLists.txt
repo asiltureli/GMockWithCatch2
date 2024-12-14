@@ -18,15 +18,15 @@ enable_testing()
 
 add_executable(TestGMockCatch2WithMain TestGMockCatch2WithMain.cpp)
 
-#add_executable(TestGMockCatch2 TestGMockCatch2.cpp)
+add_executable(TestGMockCatch2 TestGMockCatch2.cpp)
 
 target_link_libraries(TestGMockCatch2WithMain PRIVATE 
                 Catch2::Catch2WithMain
                 gmock)
 
-#target_link_libraries(TestGMockCatch2 PRIVATE
-#                Catch2::Catch2
-#                gmock)
+target_link_libraries(TestGMockCatch2 PRIVATE
+                Catch2::Catch2
+                gmock)
 
 add_test(NAME TestGMockCatch2WithMain COMMAND TestGMockCatch2WithMain)
-#add_test(NAME TestGMockCatch2 COMMAND ctest TestGMockCatch2)
+add_test(NAME TestGMockCatch2 COMMAND TestGMockCatch2)
